@@ -1,0 +1,36 @@
+﻿@model IEnumerable<WebAppPeliculas.Models.Pelicula>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="text-primary">Cargar Nueva Película</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Crear Nueva Película</a>
+</p>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                @if (!string.IsNullOrEmpty(item.Portada))
+                {
+                    <a asp-action="Details" asp-route-id="@item.IdPelicula"><img src="~/fotografias/@item.Portada" class="card-img-top" alt="Portada de @item.Titulo" style="height: 300px; object-fit: cover;"></a>
+                }
+                <div class="card-body">
+                    <h5 class="card-title">@item.Titulo</h5>
+                    <p class="card-text"><strong>Fecha de Estreno:</strong> @item.FechaEstreno.ToShortDateString()</p>
+                    <p class="card-text"><strong>Género:</strong> @item.Genero.Descripcion</p>
+                    <p class="card-text"><strong>Resumen:</strong> @item.Resumen</p>
+
+                    <div class="d-flex justify-content-between">
+                        <a asp-action="Edit" asp-route-id="@item.IdPelicula" class="btn btn-info">Editar</a>
+                        <a asp-action="Delete" asp-route-id="@item.IdPelicula" class="btn btn-danger">Borrar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

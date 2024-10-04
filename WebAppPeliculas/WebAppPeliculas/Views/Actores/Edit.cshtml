@@ -1,0 +1,57 @@
+﻿@model WebAppPeliculas.Models.Actor
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Actor</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="IdAutor" />
+            <div class="form-group">
+                <label asp-for="Nombre" class="control-label"></label>
+                <input asp-for="Nombre" class="form-control" />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FechaNacimiento" class="control-label"></label>
+                <input asp-for="FechaNacimiento" class="form-control" />
+                <span asp-validation-for="FechaNacimiento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Foto" style="font-weight: bold;" class="control-label"></label>
+                <!-- Campo oculto para mantener el string de la foto existente -->
+                <input type="hidden" asp-for="Foto" />
+                <!-- Mostrar la imagen actual si existe -->
+                <div class="mb-3">
+                    <img id="imagen" src="~/fotografias/@Model.Foto"
+                         class="rounded-circle img-thumbnail"
+                         style="max-width: 100px; max-height: 100px;"
+                         asp-append-version="true" />
+                </div>
+                <!-- Input para subir una nueva imagen -->
+                <label for="imagen" style="font-weight: bold;" class="control-label">Cargar nueva imagen:</label>
+                <input type="file" id="seleccionImg" name="imagen" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="~/js//preview.js"></script>
+
