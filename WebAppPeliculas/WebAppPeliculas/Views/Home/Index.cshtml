@@ -1,8 +1,54 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Trabajo Práctico - Laboratorio de Computación IV";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container mt-5">
+    <div class="text-center">
+        <h1 class="display-4 mb-4">Trabajo Práctico - CRUD de Películas, Actores y Géneros</h1>
+        <p class="lead">En este proyecto de Laboratorio IV, desarrollamos una aplicación web que permite gestionar películas, actores y géneros. A continuación, encontrarás un breve detalle de cada entidad y su funcionalidad dentro del sistema.</p>
+    </div>
+
+    <!-- Detalle de las Entidades -->
+    <div class="row text-center mt-5">
+        <!-- Películas -->
+        <div class="col-md-4">
+            <div class="card h-100 shadow">
+                <div class="card-body">
+                    <i class="fas fa-film fa-3x text-primary mb-3"></i>
+                    <h5 class="card-title">Películas</h5>
+                    <p class="card-text">Gestiona todas las películas, con datos como título, fecha de estreno, género, resumen y mucho más. Además, puedes agregar portadas y trailers para cada una.</p>
+                    <a href="/Peliculas/Index" class="btn btn-outline-primary">Ver Películas</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Actores -->
+        <div class="col-md-4 mt-4 mt-md-0">
+            <div class="card h-100 shadow">
+                <div class="card-body">
+                    <i class="fas fa-users fa-3x text-warning mb-3"></i>
+                    <h5 class="card-title">Actores</h5>
+                    <p class="card-text">Realiza el CRUD de actores, añadiendo información como nombre, fecha de nacimiento y fotografía. Estos actores pueden ser vinculados a las películas correspondientes.</p>
+                    <a href="/Actores/Index" class="btn btn-outline-warning">Ver Actores</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Géneros -->
+        <div class="col-md-4 mt-4 mt-md-0">
+            <div class="card h-100 shadow">
+                <div class="card-body">
+                    <i class="fas fa-tags fa-3x text-success mb-3"></i>
+                    <h5 class="card-title">Géneros</h5>
+                    <p class="card-text">Define los géneros de las películas, como acción, comedia, drama y muchos más. Puedes importar esta información desde un archivo Excel o CSV.</p>
+                    <a href="/Generos/Index" class="btn btn-outline-success">Ver Géneros</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mensaje Final -->
+    <div class="text-center mt-5">
+        <p class="lead">Este proyecto busca no solo implementar una solución técnica, sino también mostrar la importancia de una correcta organización y clasificación de la información. ¡Esperamos que disfruten el resultado!</p>
+    </div>
 </div>

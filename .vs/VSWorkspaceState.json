@@ -1,8 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\WebAppPeliculas"
+    "\\WebAppPeliculas",
+    "\\WebAppPeliculas\\WebAppPeliculas",
+    "\\WebAppPeliculas\\WebAppPeliculas\\Views",
+    "\\WebAppPeliculas\\WebAppPeliculas\\Views\\Shared"
   ],
-  "SelectedNode": "\\WebAppPeliculas\\WebAppPeliculas.sln",
+  "SelectedNode": "\\WebAppPeliculas\\WebAppPeliculas\\Views\\Shared\\_Layout.cshtml",
   "PreviewInSolutionExplorer": false
 }

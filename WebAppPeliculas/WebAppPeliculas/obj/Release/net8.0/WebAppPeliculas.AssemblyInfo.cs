@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebAppPeliculas")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+542c3e005989d5f6a84805f6ecbfd826d12607fa")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+64c3254ee8c7b6b365b898f27daef561ce39435c")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebAppPeliculas")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebAppPeliculas")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
